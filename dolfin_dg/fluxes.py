@@ -1,4 +1,4 @@
-import ufl
+import ufl_legacy as ufl
 from dolfin_dg.math import max_value as Max, min_value as Min
 
 

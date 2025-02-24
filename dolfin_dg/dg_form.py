@@ -1,7 +1,7 @@
 import abc
 
-import ufl
-from ufl import (
+import ufl_legacy as ufl
+from ufl_legacy import (
     inner, replace, grad, dot, curl, div, avg, jump)
 
 from dolfin_dg import normal_proj, tangential_proj, \

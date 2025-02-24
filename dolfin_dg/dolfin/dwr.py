@@ -1,4 +1,4 @@
-import ufl
+import ufl_legacy as ufl
 from dolfin import (
     FunctionSpace, Function, TrialFunction, TestFunction, solve,
     PETScKrylovSolver, PETScMatrix, PETScVector,

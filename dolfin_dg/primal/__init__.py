@@ -4,7 +4,7 @@ import types
 
 import numpy
 import numpy as np
-import ufl
+import ufl_legacy as ufl
 
 import dolfin_dg
 from dolfin_dg.math import hyper_tensor_T_product as G_T_mult

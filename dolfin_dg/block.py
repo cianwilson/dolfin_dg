@@ -1,4 +1,4 @@
-import ufl
+import ufl_legacy as ufl
 
 
 class SeparateSpaceFormSplitter(ufl.corealg.multifunction.MultiFunction):
@@ -131,7 +131,7 @@ def derivative_block(F, u, du=None, coefficient_derivatives=None):
     Block matrix corresponding to the ordered components of the
     Gateaux/Frechet derivative.
     """
-    import ufl
+    import ufl_legacy as ufl
     if isinstance(F, ufl.Form):
         return ufl.derivative(F, u, du, coefficient_derivatives)
 
@@ -149,8 +149,8 @@ def derivative_block(F, u, du=None, coefficient_derivatives=None):
                             % str(u))
 
     import itertools
-    from ufl.algorithms.apply_derivatives import apply_derivatives
-    from ufl.algorithms.apply_algebra_lowering import apply_algebra_lowering
+    from ufl_legacy.algorithms.apply_derivatives import apply_derivatives
+    from ufl_legacy.algorithms.apply_algebra_lowering import apply_algebra_lowering
 
     m, n = len(u), len(F)
 

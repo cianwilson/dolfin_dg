@@ -1,6 +1,6 @@
 import math
 
-import ufl
+import ufl_legacy as ufl
 from dolfin import (
     parameters, Point, project, TestFunction, MeshFunction,
     Measure, derivative, NonlinearProblem, assemble,

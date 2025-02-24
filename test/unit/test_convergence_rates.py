@@ -4,7 +4,7 @@ from dolfin import (
     parameters, FunctionSpace, UnitIntervalMesh, UnitSquareMesh, RectangleMesh,
     Function, solve, TestFunction, Constant, errornorm, ds, dx, Expression,
     Point, pi, MeshFunction, AutoSubDomain, near)
-from ufl import (
+from ufl_legacy import (
     FiniteElement, VectorElement, MixedElement, dot, triangle, as_vector, inner,
     CellVolume, FacetArea, Coefficient, grad, div, split, Measure, Identity,
     FacetNormal, sym)

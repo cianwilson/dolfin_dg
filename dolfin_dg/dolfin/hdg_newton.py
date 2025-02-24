@@ -64,16 +64,7 @@ class StaticCondensationNewtonSolver:
         self.A = dolfin.PETScMatrix()
         self.b = dolfin.PETScVector()
 
-        if krylov_solver is None:
-            solver = dolfin.PETScKrylovSolver()
-            solver.set_operator(self.A)
-            dolfin.PETScOptions.set("ksp_type", "preonly")
-            dolfin.PETScOptions.set("pc_type", "lu")
-            dolfin.PETScOptions.set("pc_factor_mat_solver_type", "mumps")
-            solver.set_from_options()
-            self.solver = solver
-        else:
-            self.solver = krylov_solver
+        self.solver = krylov_solver
 
         self.maximum_iterations = maximum_iterations
         self.rtol = rtol
@@ -115,6 +106,15 @@ class StaticCondensationNewtonSolver:
 
         if self.converged(self.b, 0):
             return 0, True
+        
+        if self.solver is None:
+            solver = dolfin.PETScKrylovSolver()
+            solver.set_operator(self.A)
+            dolfin.PETScOptions.set("ksp_type", "preonly")
+            dolfin.PETScOptions.set("pc_type", "lu")
+            dolfin.PETScOptions.set("pc_factor_mat_solver_type", "mumps")
+            solver.set_from_options()
+            self.solver = solver
 
         for newton_iteration in range(1, self.maximum_iterations+1):
             self.solver.solve(dubar.vector(), self.b)

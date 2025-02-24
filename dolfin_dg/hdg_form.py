@@ -1,6 +1,6 @@
 import abc
 
-import ufl
+import ufl_legacy as ufl
 
 from dolfin_dg import hyper_tensor_product, hyper_tensor_T_product, \
     DGDirichletBC

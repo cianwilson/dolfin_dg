@@ -1,4 +1,4 @@
-import ufl
+import ufl_legacy as ufl
 
 from dolfin_dg.math import tensor_jump, cross_jump, dg_cross
 from dolfin_dg.math import hyper_tensor_product as G_mult

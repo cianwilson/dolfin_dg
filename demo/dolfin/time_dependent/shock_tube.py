@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import ufl
+import ufl_legacy as ufl
 from dolfin import (
     parameters, plot, TrialFunction, TestFunction, MeshFunction, Measure,
     derivative, solve, NonlinearProblem, assemble, XDMFFile, Constant,

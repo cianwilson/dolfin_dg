@@ -1,7 +1,7 @@
 import numpy as np
 from petsc4py import PETSc
 
-import ufl
+import ufl_legacy as ufl
 import dolfinx
 
 

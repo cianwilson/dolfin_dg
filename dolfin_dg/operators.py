@@ -1,7 +1,7 @@
 import inspect
 
-import ufl
-from ufl import (
+import ufl_legacy as ufl
+from ufl_legacy import (
     grad, inner, curl, dot, as_vector, tr, Identity, variable, diff, exp,
     Measure, FacetNormal
 )

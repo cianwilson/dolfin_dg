@@ -1,4 +1,4 @@
-import ufl
+import ufl_legacy as ufl
 import math
 import numpy
 

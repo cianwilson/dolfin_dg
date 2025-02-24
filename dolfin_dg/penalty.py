@@ -1,7 +1,6 @@
 import functools
 import typing
-import ufl
-import ufl.algorithms.apply_derivatives
+import ufl_legacy as ufl
 
 import dolfin_dg
 import dolfin_dg.primal

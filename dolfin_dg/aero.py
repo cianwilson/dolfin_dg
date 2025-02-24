@@ -12,7 +12,7 @@ the solution variable, :math:`U`, is comprised of the conserved variables
         \end{pmatrix}.
 """
 
-from ufl import as_vector, dot
+from ufl_legacy import as_vector, dot
 
 
 def conserved_variables(U):

@@ -5,7 +5,7 @@ import numpy as np
 from mpi4py import MPI
 
 import dolfinx
-import ufl
+import ufl_legacy as ufl
 
 import dolfin_dg
 import dolfin_dg.dolfinx

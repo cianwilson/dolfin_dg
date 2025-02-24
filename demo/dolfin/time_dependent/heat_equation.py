@@ -1,7 +1,7 @@
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-import ufl
+import ufl_legacy as ufl
 from dolfin import (
     project, FunctionSpace, TrialFunction, TestFunction, Expression, derivative,
     solve, Constant, info, Function, dx, ds, errornorm, UnitIntervalMesh)

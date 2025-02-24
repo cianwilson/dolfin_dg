@@ -1,6 +1,6 @@
 import pytest
-import ufl
-from ufl.algorithms.apply_derivatives import apply_derivatives
+import ufl_legacy as ufl
+from ufl_legacy.algorithms.apply_derivatives import apply_derivatives
 
 from dolfin_dg import hyper_tensor_product, homogeneity_tensor
 

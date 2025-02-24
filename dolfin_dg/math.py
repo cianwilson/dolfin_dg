@@ -1,7 +1,7 @@
 import inspect
 import packaging.version
 
-import ufl
+import ufl_legacy as ufl
 
 
 if packaging.version.parse(ufl.__version__)\
@@ -236,7 +236,7 @@ def homogenize(F, u, diff_op):
     \nabla u) = \nabla u`. The homogeneity tensor in this case
     :math:`G_{ij} = \delta_{ij}`
 
-    >>> import ufl, dolfin_dg.math
+    >>> import ufl_legacy as ufl, dolfin_dg.math
     >>> element = ufl.FiniteElement("CG", ufl.triangle, 1)
     >>> u = ufl.Coefficient(element)
     >>> G = dolfin_dg.math.homogenize(lambda u, grad_u: grad_u, u, ufl.grad(u))

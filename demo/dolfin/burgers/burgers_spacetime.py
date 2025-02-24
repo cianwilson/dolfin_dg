@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import ufl
+import ufl_legacy as ufl
 from dolfin import (
     parameters, RectangleMesh, SubDomain, Point, DOLFIN_EPS, project, inner,
     as_vector, PETScSNESSolver, dot, dS, NonlinearProblem, plot,
